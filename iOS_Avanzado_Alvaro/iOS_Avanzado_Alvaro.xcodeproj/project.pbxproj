@@ -7,10 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		674FB9412DA51D90005ED563 /* HeroesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674FB9402DA51D8C005ED563 /* HeroesController.swift */; };
+		674FB9432DA51DA2005ED563 /* HeroesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 674FB9422DA51DA2005ED563 /* HeroesController.xib */; };
+		674FB9492DA52B33005ED563 /* HeroesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674FB9482DA52B30005ED563 /* HeroesUseCase.swift */; };
+		674FB94D2DA52FAD005ED563 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674FB94C2DA52FAC005ED563 /* Hero.swift */; };
+		674FB94F2DA52FB5005ED563 /* HeroLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674FB94E2DA52FB0005ED563 /* HeroLocation.swift */; };
+		674FB9512DA536EC005ED563 /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674FB9502DA536EC005ED563 /* HeroesViewModel.swift */; };
+		674FB9552DA53805005ED563 /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674FB9532DA53805005ED563 /* HeroCell.swift */; };
+		674FB9562DA53805005ED563 /* HeroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 674FB9542DA53805005ED563 /* HeroCell.xib */; };
 		6777963A2DA3D96100103334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677796342DA3D96100103334 /* Assets.xcassets */; };
 		6777963C2DA3D96100103334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 677796372DA3D96100103334 /* LaunchScreen.storyboard */; };
 		6777963D2DA3D96100103334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677796332DA3D96100103334 /* AppDelegate.swift */; };
 		6777963E2DA3D96100103334 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677796382DA3D96100103334 /* SceneDelegate.swift */; };
+		677796492DA3E0C000103334 /* SplashController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 677796482DA3E0C000103334 /* SplashController.xib */; };
+		6777964B2DA3E0C800103334 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6777964A2DA3E0C800103334 /* SplashController.swift */; };
+		677796512DA3E37500103334 /* MOHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677796502DA3E37300103334 /* MOHero.swift */; };
+		677796532DA3E37A00103334 /* MOHeroLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677796522DA3E37700103334 /* MOHeroLocation.swift */; };
+		677796552DA3E38800103334 /* StoreSwiftDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677796542DA3E37D00103334 /* StoreSwiftDataProvider.swift */; };
+		677796582DA3EE5000103334 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677796572DA3EE5000103334 /* RequestBuilder.swift */; };
+		6777965A2DA3EE5700103334 /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677796592DA3EE5700103334 /* ApiProvider.swift */; };
+		6777965C2DA3EE6600103334 /* GAFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6777965B2DA3EE5A00103334 /* GAFError.swift */; };
+		6777965E2DA3EE7000103334 /* GAFEndopoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6777965D2DA3EE7000103334 /* GAFEndopoint.swift */; };
+		677796602DA3EE7900103334 /* APIHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6777965F2DA3EE7600103334 /* APIHero.swift */; };
+		677796622DA3EE7E00103334 /* APIHeroLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677796612DA3EE7C00103334 /* APIHeroLocation.swift */; };
+		677796642DA3F02A00103334 /* SecureDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677796632DA3F02600103334 /* SecureDataProvider.swift */; };
+		677796682DA3F22000103334 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 677796672DA3F22000103334 /* KeychainSwift */; };
+		6777966A2DA451C300103334 /* SplashBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677796692DA451C000103334 /* SplashBuilder.swift */; };
+		6777966C2DA451CB00103334 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6777966B2DA451C700103334 /* SplashViewModel.swift */; };
+		677796712DA453FE00103334 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 677796702DA453FE00103334 /* LoginController.xib */; };
+		677796722DA453FE00103334 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6777966F2DA453FE00103334 /* LoginController.swift */; };
+		677796742DA455F000103334 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677796732DA455EE00103334 /* Binding.swift */; };
+		677796E72DA4582B00103334 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677796E62DA4582800103334 /* LoginUseCase.swift */; };
+		677796E92DA46F7C00103334 /* LoginResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677796E82DA46F6C00103334 /* LoginResponseDTO.swift */; };
+		677796EB2DA4741E00103334 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677796EA2DA4741E00103334 /* LoginViewModel.swift */; };
+		677796ED2DA4769700103334 /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677796EC2DA4769700103334 /* LoginBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +61,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		674FB9402DA51D8C005ED563 /* HeroesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesController.swift; sourceTree = "<group>"; };
+		674FB9422DA51DA2005ED563 /* HeroesController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesController.xib; sourceTree = "<group>"; };
+		674FB9482DA52B30005ED563 /* HeroesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesUseCase.swift; sourceTree = "<group>"; };
+		674FB94C2DA52FAC005ED563 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		674FB94E2DA52FB0005ED563 /* HeroLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLocation.swift; sourceTree = "<group>"; };
+		674FB9502DA536EC005ED563 /* HeroesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewModel.swift; sourceTree = "<group>"; };
+		674FB9532DA53805005ED563 /* HeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
+		674FB9542DA53805005ED563 /* HeroCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCell.xib; sourceTree = "<group>"; };
 		677795FF2DA3D8E400103334 /* iOS_Avanzado_Alvaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Avanzado_Alvaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		677796152DA3D8E400103334 /* iOS_Avanzado_AlvaroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_Avanzado_AlvaroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6777961F2DA3D8E400103334 /* iOS_Avanzado_AlvaroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_Avanzado_AlvaroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +77,27 @@
 		677796352DA3D96100103334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		677796362DA3D96100103334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		677796382DA3D96100103334 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		677796482DA3E0C000103334 /* SplashController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashController.xib; sourceTree = "<group>"; };
+		6777964A2DA3E0C800103334 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
+		677796502DA3E37300103334 /* MOHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOHero.swift; sourceTree = "<group>"; };
+		677796522DA3E37700103334 /* MOHeroLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOHeroLocation.swift; sourceTree = "<group>"; };
+		677796542DA3E37D00103334 /* StoreSwiftDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSwiftDataProvider.swift; sourceTree = "<group>"; };
+		677796572DA3EE5000103334 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		677796592DA3EE5700103334 /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
+		6777965B2DA3EE5A00103334 /* GAFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAFError.swift; sourceTree = "<group>"; };
+		6777965D2DA3EE7000103334 /* GAFEndopoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAFEndopoint.swift; sourceTree = "<group>"; };
+		6777965F2DA3EE7600103334 /* APIHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHero.swift; sourceTree = "<group>"; };
+		677796612DA3EE7C00103334 /* APIHeroLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHeroLocation.swift; sourceTree = "<group>"; };
+		677796632DA3F02600103334 /* SecureDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureDataProvider.swift; sourceTree = "<group>"; };
+		677796692DA451C000103334 /* SplashBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashBuilder.swift; sourceTree = "<group>"; };
+		6777966B2DA451C700103334 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		6777966F2DA453FE00103334 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		677796702DA453FE00103334 /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
+		677796732DA455EE00103334 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
+		677796E62DA4582800103334 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		677796E82DA46F6C00103334 /* LoginResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDTO.swift; sourceTree = "<group>"; };
+		677796EA2DA4741E00103334 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		677796EC2DA4769700103334 /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -59,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677796682DA3F22000103334 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +139,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		674FB94A2DA52F9A005ED563 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				674FB9482DA52B30005ED563 /* HeroesUseCase.swift */,
+				677796E62DA4582800103334 /* LoginUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		674FB94B2DA52FA1005ED563 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				674FB94C2DA52FAC005ED563 /* Hero.swift */,
+				674FB94E2DA52FB0005ED563 /* HeroLocation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		674FB9522DA537C6005ED563 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				674FB9532DA53805005ED563 /* HeroCell.swift */,
+				674FB9542DA53805005ED563 /* HeroCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		677795F62DA3D8E400103334 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +189,11 @@
 		677796392DA3D96100103334 /* iOS_Avanzado_Alvaro */ = {
 			isa = PBXGroup;
 			children = (
+				6777964E2DA3E15E00103334 /* Data */,
+				677796632DA3F02600103334 /* SecureDataProvider.swift */,
+				6777964D2DA3E15900103334 /* Networking */,
+				6777964C2DA3E15400103334 /* Domain */,
+				6777963F2DA3E05200103334 /* Presentation */,
 				677796332DA3D96100103334 /* AppDelegate.swift */,
 				677796342DA3D96100103334 /* Assets.xcassets */,
 				677796352DA3D96100103334 /* Info.plist */,
@@ -109,6 +201,99 @@
 				677796382DA3D96100103334 /* SceneDelegate.swift */,
 			);
 			path = iOS_Avanzado_Alvaro;
+			sourceTree = "<group>";
+		};
+		6777963F2DA3E05200103334 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				677796EE2DA477CD00103334 /* Heroes */,
+				6777966E2DA453D100103334 /* Login */,
+				6777966D2DA4539400103334 /* Splash */,
+				677796732DA455EE00103334 /* Binding.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		6777964C2DA3E15400103334 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				674FB94B2DA52FA1005ED563 /* Models */,
+				674FB94A2DA52F9A005ED563 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		6777964D2DA3E15900103334 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				677796572DA3EE5000103334 /* RequestBuilder.swift */,
+				677796592DA3EE5700103334 /* ApiProvider.swift */,
+				6777965B2DA3EE5A00103334 /* GAFError.swift */,
+				6777965D2DA3EE7000103334 /* GAFEndopoint.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		6777964E2DA3E15E00103334 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6777964F2DA3E35A00103334 /* Swift Data */,
+				677796562DA3EE3000103334 /* ApiModel */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		6777964F2DA3E35A00103334 /* Swift Data */ = {
+			isa = PBXGroup;
+			children = (
+				677796502DA3E37300103334 /* MOHero.swift */,
+				677796522DA3E37700103334 /* MOHeroLocation.swift */,
+				677796542DA3E37D00103334 /* StoreSwiftDataProvider.swift */,
+			);
+			path = "Swift Data";
+			sourceTree = "<group>";
+		};
+		677796562DA3EE3000103334 /* ApiModel */ = {
+			isa = PBXGroup;
+			children = (
+				677796E82DA46F6C00103334 /* LoginResponseDTO.swift */,
+				6777965F2DA3EE7600103334 /* APIHero.swift */,
+				677796612DA3EE7C00103334 /* APIHeroLocation.swift */,
+			);
+			path = ApiModel;
+			sourceTree = "<group>";
+		};
+		6777966D2DA4539400103334 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				6777966B2DA451C700103334 /* SplashViewModel.swift */,
+				677796692DA451C000103334 /* SplashBuilder.swift */,
+				677796482DA3E0C000103334 /* SplashController.xib */,
+				6777964A2DA3E0C800103334 /* SplashController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		6777966E2DA453D100103334 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				677796EC2DA4769700103334 /* LoginBuilder.swift */,
+				677796EA2DA4741E00103334 /* LoginViewModel.swift */,
+				6777966F2DA453FE00103334 /* LoginController.swift */,
+				677796702DA453FE00103334 /* LoginController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		677796EE2DA477CD00103334 /* Heroes */ = {
+			isa = PBXGroup;
+			children = (
+				674FB9522DA537C6005ED563 /* Views */,
+				674FB9502DA536EC005ED563 /* HeroesViewModel.swift */,
+				674FB9402DA51D8C005ED563 /* HeroesController.swift */,
+				674FB9422DA51DA2005ED563 /* HeroesController.xib */,
+			);
+			path = Heroes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +313,7 @@
 			);
 			name = iOS_Avanzado_Alvaro;
 			packageProductDependencies = (
+				677796672DA3F22000103334 /* KeychainSwift */,
 			);
 			productName = iOS_Avanzado_Alvaro;
 			productReference = 677795FF2DA3D8E400103334 /* iOS_Avanzado_Alvaro.app */;
@@ -211,6 +397,9 @@
 			);
 			mainGroup = 677795F62DA3D8E400103334;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				677796662DA3F22000103334 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 677796002DA3D8E400103334 /* Products */;
 			projectDirPath = "";
@@ -228,8 +417,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677796712DA453FE00103334 /* LoginController.xib in Resources */,
+				674FB9562DA53805005ED563 /* HeroCell.xib in Resources */,
 				6777963A2DA3D96100103334 /* Assets.xcassets in Resources */,
+				674FB9432DA51DA2005ED563 /* HeroesController.xib in Resources */,
 				6777963C2DA3D96100103334 /* LaunchScreen.storyboard in Resources */,
+				677796492DA3E0C000103334 /* SplashController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,8 +447,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6777966C2DA451CB00103334 /* SplashViewModel.swift in Sources */,
+				677796602DA3EE7900103334 /* APIHero.swift in Sources */,
+				677796582DA3EE5000103334 /* RequestBuilder.swift in Sources */,
+				6777965A2DA3EE5700103334 /* ApiProvider.swift in Sources */,
 				6777963D2DA3D96100103334 /* AppDelegate.swift in Sources */,
+				674FB9492DA52B33005ED563 /* HeroesUseCase.swift in Sources */,
+				674FB9412DA51D90005ED563 /* HeroesController.swift in Sources */,
+				674FB9512DA536EC005ED563 /* HeroesViewModel.swift in Sources */,
+				677796EB2DA4741E00103334 /* LoginViewModel.swift in Sources */,
 				6777963E2DA3D96100103334 /* SceneDelegate.swift in Sources */,
+				677796742DA455F000103334 /* Binding.swift in Sources */,
+				677796552DA3E38800103334 /* StoreSwiftDataProvider.swift in Sources */,
+				674FB94D2DA52FAD005ED563 /* Hero.swift in Sources */,
+				677796ED2DA4769700103334 /* LoginBuilder.swift in Sources */,
+				6777965C2DA3EE6600103334 /* GAFError.swift in Sources */,
+				677796532DA3E37A00103334 /* MOHeroLocation.swift in Sources */,
+				6777965E2DA3EE7000103334 /* GAFEndopoint.swift in Sources */,
+				677796622DA3EE7E00103334 /* APIHeroLocation.swift in Sources */,
+				674FB9552DA53805005ED563 /* HeroCell.swift in Sources */,
+				674FB94F2DA52FB5005ED563 /* HeroLocation.swift in Sources */,
+				6777964B2DA3E0C800103334 /* SplashController.swift in Sources */,
+				677796E92DA46F7C00103334 /* LoginResponseDTO.swift in Sources */,
+				677796722DA453FE00103334 /* LoginController.swift in Sources */,
+				677796512DA3E37500103334 /* MOHero.swift in Sources */,
+				6777966A2DA451C300103334 /* SplashBuilder.swift in Sources */,
+				677796642DA3F02A00103334 /* SecureDataProvider.swift in Sources */,
+				677796E72DA4582B00103334 /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +803,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		677796662DA3F22000103334 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 24.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		677796672DA3F22000103334 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 677796662DA3F22000103334 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 677795F72DA3D8E400103334 /* Project object */;
 }
