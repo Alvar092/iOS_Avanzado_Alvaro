@@ -45,7 +45,10 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func logInButtonTapped(_ sender: Any) {
-        viewModel.login(userName: userNameField.text, password: passwordField.text)
+        // CAMBIAR LOS CAMPOS userNameField.text y passwordField.text
+        viewModel.login(userName: "entrenah92@gmail.com", password: "asdfgh")
+        let heroesVC = HeroesBuilder.build()
+        navigationController?.pushViewController(heroesVC, animated: true)
     }
     
     

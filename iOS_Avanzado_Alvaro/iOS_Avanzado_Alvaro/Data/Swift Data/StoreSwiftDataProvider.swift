@@ -75,11 +75,32 @@ extension StoreSwiftDataProvider {
     }
     
     func insert(heroes: [ApiHero]) {
-        
+        for hero in heroes {
+            let newHero = MOHero(favorite: hero.favorite,
+                                 identifier: hero.id,
+                                 info: hero.description,
+                                 name: hero.name,
+                                 photo: hero.photo)
+            context.insert(newHero)
+        }
+        saveContext()
     }
     
     func insert(locations: [ApiHeroLocation]) {
-        
+        for location in locations {
+            let filter = #Predicate<MOHero>{ hero in
+                hero.identifier == location.hero?.id
+            }
+            let hero = fetchHeroes(filter: filter).first
+            
+            let newLocation = MOHeroLocation(date: location.date,
+                                             identifier: location.id,
+                                             latitude: location.latitude,
+                                             longitude: location.longitude,
+                                             hero: hero)
+            context.insert(newLocation)
+        }
+        saveContext()
     }
     
     func clearBBDD() {

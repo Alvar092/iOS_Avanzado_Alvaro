@@ -35,10 +35,17 @@ final class HeroesController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        listenStatesChangesInViewModel()
         configureCollectionView()
+        viewModel.loadData()
     }
     
     func configureCollectionView() {
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 4
+        layout.minimumInteritemSpacing = 10
+        collectionView.collectionViewLayout = layout
+        
         collectionView.delegate = self
         
         // Usamos un CellRegistration para crear las celdas  una ventaja que tiene es que si usamos el objeto como
@@ -80,20 +87,20 @@ extension HeroesController: UICollectionViewDelegate, UICollectionViewDelegateFl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout ,sizeForItemAt indexPath: IndexPath) -> CGSize {
         let spacing: CGFloat = 10
         let totalSpacing = spacing * 3
-        let itemWidth = (collectionView.bounds.width - totalSpacing) / 2
-        return CGSize(width: itemWidth, height: 200)
+        let itemWidth = ((collectionView.bounds.width - totalSpacing)/2)
+        return CGSize(width: itemWidth, height: 150)
     }
     
     
     // Cuando se seleccione un heroe
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        guard let hero = viewModel.heroWith(index: indexPath.row) else {
-//            return
-//        }
-//        let viewModel = HeroDetailViewModel(hero: hero)
-//        let heroDetail = HeroDetailController(viewModel: viewModel)
-//        navigationController?.pushViewController(heroDetail, animated: true)
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let hero = viewModel.heroWith(index: indexPath.row) else {
+            return
+        }
+        let viewModel = HeroDetailViewModel(hero: hero)
+        let heroDetail = HeroDetailController(viewModel: viewModel)
+        navigationController?.pushViewController(heroDetail, animated: true)
+    }
         
     
 }

@@ -23,12 +23,13 @@ final class HeroesUseCase: HeroesUseCaseProtocol {
         let localHeroes = loadHeroes()
         
         // Comprobamos si tenemos los datos en BBD sis es así los usamos, si no se piden al servicio web
-        if loadHeroes().isEmpty {
+        if localHeroes.isEmpty {
             apiProvider.fetchHeroes { [weak self] result in
                 switch result {
                 case .success(let apiHeroes):
                     self?.storedData.insert(heroes: apiHeroes)
-                    completion(.success(self?.loadHeroes() ?? []))
+                    let updatedLocalHeroes = self?.loadHeroes() ?? []
+                    completion(.success(updatedLocalHeroes))
                 case .failure(let error):
                     completion(.failure(error))
                 }

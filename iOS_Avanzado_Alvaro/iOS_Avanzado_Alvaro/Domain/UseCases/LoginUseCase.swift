@@ -46,7 +46,6 @@ final class LoginUseCase: LoginUseCaseProtocol {
             case .success(let token):
                 self?.secureData.setToken(token)
                 completion(.success(()))
-                print("EXITO!")
             case .failure:
                 completion(.failure(LoginError(reason: "Ha ocurrido un error en la red")))
             }

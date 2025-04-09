@@ -9,11 +9,15 @@ import Foundation
 import SwiftData
 
 @Model public class MOHero {
+    #Unique<MOHero>([\.identifier])
     var favorite: Bool?
     var identifier: String?
     var info: String?
     var name: String?
     var photo: String?
+    
+    // Relación con MOHeroLocation
+    @Relationship(deleteRule: .cascade, inverse: \MOHeroLocation.hero) var locations: [MOHeroLocation]?
     
     init(favorite: Bool? = nil, identifier: String? = nil, info: String? = nil, name: String? = nil, photo: String? = nil) {
         self.favorite = favorite

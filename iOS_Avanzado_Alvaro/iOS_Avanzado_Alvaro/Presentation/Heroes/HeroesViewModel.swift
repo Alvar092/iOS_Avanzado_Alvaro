@@ -46,6 +46,7 @@ final class HeroesViewModel {
     }
     
     func fetchHeroes() -> [Hero] {
+        print("Heroes recibidos: \(heroes.count)")
         return heroes
     }
     

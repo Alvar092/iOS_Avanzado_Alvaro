@@ -86,7 +86,7 @@ struct ApiProvider {
         }
     }
     
-    func fetchLocations(id: String, completion: @escaping (Result<[ApiHeroLocation], GAFError>)-> Void) {
+    func fetchLocationsForHeroWith(id: String, completion: @escaping (Result<[ApiHeroLocation], GAFError>)-> Void) {
         do {
             let request = try requestBuilder.build(endpoint: .locations(id: id))
             manageResponse(urlRequest: request, completion: completion)
