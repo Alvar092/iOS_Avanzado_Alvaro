@@ -103,6 +103,30 @@ extension StoreSwiftDataProvider {
         saveContext()
     }
     
+    func insert(transformations: [ApiHeroTransformation]) {
+        for transformation in transformations {
+            let filter = #Predicate<MOHero> { hero in
+                hero.identifier == transformation.hero?.id
+            }
+            guard let hero = fetchHeroes(filter: filter).first else {
+                continue
+            }
+            
+            let newTransformation = MOHeroTransformation(identifier: transformation.id,
+                                                         name: transformation.name,
+                                                         info: transformation.description,
+                                                         photo: transformation.photo)
+            context.insert(newTransformation)
+            
+            if hero.transformations != nil {
+                hero.transformations?.append(newTransformation)
+            } else {
+                hero.transformations = [newTransformation]
+            }
+        }
+        saveContext()
+    }
+    
     func clearBBDD() {
         // Quitamos los cambios pendientes que haya en el contexto
         context.rollback()
@@ -111,8 +135,9 @@ extension StoreSwiftDataProvider {
             // Borra directamente de la BBDD similar el BSBatchDeleteRequest
             try context.delete(model: MOHero.self)
             try context.delete(model: MOHeroLocation.self)
+            try context.delete(model: MOHeroTransformation.self)
         } catch {
-            debugPrint("There wwas an error clearing BBDD \(error)")
+            debugPrint("There was an error clearing BBDD \(error)")
         }
     }
 }

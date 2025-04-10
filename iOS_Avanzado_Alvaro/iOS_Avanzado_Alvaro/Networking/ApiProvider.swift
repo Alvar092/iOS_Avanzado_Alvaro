@@ -95,6 +95,14 @@ struct ApiProvider {
         }
     }
     
+    func fetchTransformationsForHero(id: String, completion: @escaping (Result<[ApiHeroTransformation], GAFError>) -> Void) {
+        do{
+            let request = try requestBuilder.build(endpoint: .transformations(id: id))
+            manageResponse(urlRequest: request, completion: completion)
+        } catch {
+            completion(.failure(error))
+        }
+    }
     
     
     // Verifica si hay errores de red, el codigo de estado HTTP y decodifica el JSON

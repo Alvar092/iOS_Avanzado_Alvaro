@@ -9,15 +9,21 @@ import UIKit
 import MapKit
 import CoreLocation
 
+enum HeroTransformationSection: Hashable {
+    case main
+}
+
 class HeroDetailController: UIViewController {
     
-    
-    
     @IBOutlet weak var heroNameLabel: UILabel!
-    @IBOutlet weak var heroDescriptionLabel: UILabel!
+    @IBOutlet weak var heroDescriptionTextView: UITextView!
+    
     @IBOutlet weak var mapView: MKMapView!
     
-    var viewModel: HeroDetailViewModel
+    @IBOutlet weak var transformationsCollectionView: UICollectionView!
+    
+    private var viewModel: HeroDetailViewModel
+    private var dataSource: DataSource?
     private var locationManager: CLLocationManager = .init()
     
     init(viewModel: HeroDetailViewModel) {
@@ -32,8 +38,10 @@ class HeroDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurateView()
+        configureCollectionView()
         listenStatesChangesInViewModel()
         checkLocationAuthorizationStatus()
+        viewModel.loadTransformations()
         viewModel.loadData()
     }
     
@@ -43,7 +51,7 @@ class HeroDetailController: UIViewController {
         mapView.pitchButtonVisibility = .visible
         mapView.showsUserLocation = true
         heroNameLabel.text = viewModel.hero.name
-        heroDescriptionLabel.text = viewModel.hero.description
+        heroDescriptionTextView.text = viewModel.hero.description
     }
     
     func listenStatesChangesInViewModel() {
@@ -53,6 +61,10 @@ class HeroDetailController: UIViewController {
                 self?.addAnnotationsToMap()
             case .errorLoadingLocation(error: let error):
                 debugPrint(error.localizedDescription)
+            case .transformationsUpdated:
+                self?.applySnapshot()
+            case .errorLoadingTransformations(error: let error):
+                print(error)
             }
         }
     }
@@ -107,5 +119,66 @@ extension HeroDetailController: MKMapViewDelegate {
         }
         // Si no existe una vista reutilizable creamos una
         return HeroAnnotationView(annotation: annotation, reuseIdentifier: HeroAnnotationView.identifier)
+    }
+}
+
+
+
+
+
+extension HeroDetailController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    typealias DataSource = UICollectionViewDiffableDataSource<HeroTransformationSection, HeroTransformation>
+    typealias CellRegistration = UICollectionView.CellRegistration<TransformationCell, HeroTransformation>
+    
+    func configureCollectionView() {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+//        layout.minimumLineSpacing = 0
+//        layout.minimumInteritemSpacing = 0
+        
+        transformationsCollectionView.collectionViewLayout = layout
+        
+        transformationsCollectionView?.delegate = self
+        
+        transformationsCollectionView.isPagingEnabled = true
+        transformationsCollectionView.showsHorizontalScrollIndicator = false
+        
+        let nib = UINib(nibName: TransformationCell.identifier, bundle: nil)
+        let cellRegistration: CellRegistration = CellRegistration(cellNib: nib) { cell, indexPath, transformation in
+            cell.configureCell(transformation: transformation)
+        }
+        dataSource = DataSource(collectionView: transformationsCollectionView, cellProvider: { collectionView, indexPath, transformation in
+            collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: transformation)
+        })
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout ,sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    private func applySnapshot() {
+        guard let dataSource = self.dataSource else {
+            return
+        }
+        
+        var snapshot = NSDiffableDataSourceSnapshot<HeroTransformationSection, HeroTransformation>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(viewModel.transformations, toSection: .main)
+        
+        dataSource.apply(snapshot, animatingDifferences: true )
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let transformation = viewModel.transformationWith(index: indexPath.row) else {
+            return
+        }
+        let transformationDetail = TransformationDetailController(nibName: TransformationDetailController.identifier, bundle: nil)
+        transformationDetail.transformation = transformation
+        transformationDetail.modalPresentationStyle = .pageSheet
+        present(transformationDetail, animated: true, completion: nil)
     }
 }

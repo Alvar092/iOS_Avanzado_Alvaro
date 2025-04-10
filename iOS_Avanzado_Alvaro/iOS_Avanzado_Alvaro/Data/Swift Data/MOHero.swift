@@ -18,6 +18,8 @@ import SwiftData
     
     // Relación con MOHeroLocation
     @Relationship(deleteRule: .cascade, inverse: \MOHeroLocation.hero) var locations: [MOHeroLocation]?
+    // Relacion con MOHeroTransformation
+    @Relationship(deleteRule: .cascade, inverse: \MOHeroTransformation.hero) var transformations: [MOHeroTransformation]?
     
     init(favorite: Bool? = nil, identifier: String? = nil, info: String? = nil, name: String? = nil, photo: String? = nil) {
         self.favorite = favorite
@@ -37,4 +39,5 @@ extension MOHero {
              photo: self.photo)
     }
 }
+
 

@@ -37,6 +37,11 @@ final class HeroesController: UIViewController {
         super.viewDidLoad()
         listenStatesChangesInViewModel()
         configureCollectionView()
+       
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         viewModel.loadData()
     }
     

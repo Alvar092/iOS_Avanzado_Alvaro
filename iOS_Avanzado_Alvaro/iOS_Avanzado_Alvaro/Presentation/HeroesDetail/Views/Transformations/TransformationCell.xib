@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TransformationCell" customModule="iOS_Avanzado_Alvaro" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="167"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="413" height="167"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rOd-gN-JmG">
+                        <rect key="frame" x="4" y="4" width="405" height="159"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nrR-r3-2oL">
+                                <rect key="frame" x="0.0" y="0.0" width="186" height="159"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKK-27-alh">
+                                <rect key="frame" x="190" y="0.0" width="215" height="159"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="rOd-gN-JmG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="64A-Ka-ddT"/>
+                <constraint firstAttribute="trailing" secondItem="rOd-gN-JmG" secondAttribute="trailing" constant="4" id="Fa4-Kl-69v"/>
+                <constraint firstAttribute="bottom" secondItem="rOd-gN-JmG" secondAttribute="bottom" constant="4" id="GQs-OY-Fsc"/>
+                <constraint firstItem="rOd-gN-JmG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="Mo0-i8-Lus"/>
+                <constraint firstItem="nrR-r3-2oL" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.45" id="XM1-zA-rFk"/>
+            </constraints>
+            <size key="customSize" width="413" height="167"/>
+            <connections>
+                <outlet property="transformationImageView" destination="nrR-r3-2oL" id="VjR-uY-ZPi"/>
+                <outlet property="transformationNameLabel" destination="CKK-27-alh" id="dQ8-U8-SUt"/>
+            </connections>
+            <point key="canvasLocation" x="361.06870229007632" y="61.619718309859159"/>
+        </collectionViewCell>
+    </objects>
+</document>

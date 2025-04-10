@@ -28,7 +28,10 @@ class SplashController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
-        viewModel.load()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+          viewModel.load()
     }
     
     private func bind() {
@@ -42,9 +45,9 @@ class SplashController: UIViewController {
                 self?.setAnimation(false)
                 // dependiendo de si tenemos token de session navegamos a login o la pantallas de Heroes
                 if self?.secureData.getToken() != nil {
-//                    let heroesVC = HeroesController.build()
-//                    self?.navigationController?.pushViewController(heroesVC, animated: false)
-//                } else {
+                    let heroesVC = HeroesBuilder.build()
+                    self?.navigationController?.pushViewController(heroesVC, animated: false)
+                } else {
                     let loginController = LoginBuilder.build()
                     self?.navigationController?.pushViewController(loginController, animated: true)
                 }

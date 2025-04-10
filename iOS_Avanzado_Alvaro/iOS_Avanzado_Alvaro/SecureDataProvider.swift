@@ -37,14 +37,6 @@ struct SecureDataProvider: SecureDataProtocol {
     func clearToken() {
         keychain.delete(keyToken)
     }
-    
-     
-    func clearBBDD() {
-        
-    }
-    
-    
-    
 }
 
 

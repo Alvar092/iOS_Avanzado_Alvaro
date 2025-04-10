@@ -32,7 +32,6 @@ class LoginViewModel {
         useCase.run(username: userName, password: password) {[weak self] result in
             switch result {
             case .success:
-                print("Exito")
                 self?.onStateChanged.update(.success)
             case .failure(let error):
                 self?.onStateChanged.update(.error(reason: error.reason))

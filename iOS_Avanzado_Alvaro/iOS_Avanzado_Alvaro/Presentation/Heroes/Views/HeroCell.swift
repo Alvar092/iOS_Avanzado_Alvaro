@@ -16,8 +16,6 @@ class HeroCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        heroImage.layer.cornerRadius = 20
-//        heroImage.clipsToBounds = true
     }
     
     override func layoutSubviews() {
