@@ -27,7 +27,7 @@ final class LoginUseCase: LoginUseCaseProtocol {
     
     // inicializa el caso con un punto de origen de datos para iniciar la sesión.
     // Entiendo que aqui se guardaran los datos de primeras y se guardarían en persistencia mientras estamos en el ajo.
-    init(apiProvider: ApiProvider = .init(),secureData: SecureDataProvider = .init()) {
+    init(apiProvider: ApiProvider = .init(),secureData:SecureDataProtocol = SecureDataProvider()) {
         self.apiProvider = apiProvider
         self.secureData = secureData
     }

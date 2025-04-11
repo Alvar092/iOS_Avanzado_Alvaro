@@ -82,7 +82,7 @@ struct ApiProvider {
             let request = try requestBuilder.build(endpoint: .heroes(name: name))
             manageResponse(urlRequest: request, completion: completion)
         } catch {
-            completion(.failure(.errorParsingData))
+            completion(.failure(error))
         }
     }
     
@@ -129,13 +129,14 @@ struct ApiProvider {
                 return
             }
                 // Decodifico datos
-                do {
-                    // FALLA AQUI
+            do {
                     let decodedResponse = try JSONDecoder().decode(T.self, from: data)
                     completion(.success(decodedResponse))
                 } catch {
-                    completion(.failure(.noDataReceived))
+                    completion(.failure(.errorParsingData))
                 }
         }.resume()
     }
+    
+    
 }

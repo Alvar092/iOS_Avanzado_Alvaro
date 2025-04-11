@@ -32,7 +32,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="dvf-gn-vqk">
+                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dvf-gn-vqk">
                             <rect key="frame" x="0.0" y="27.333333333333314" width="377" height="240"/>
                             <constraints>
                                 <constraint firstAttribute="height" priority="750" constant="240" id="UQL-Gw-UXv"/>

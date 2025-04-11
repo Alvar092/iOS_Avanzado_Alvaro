@@ -70,6 +70,28 @@ extension StoreSwiftDataProvider {
         return (try? context.fetch(request)) ?? []
     }
     
+    func fetchLocations(filter: Predicate<MOHeroLocation>? = nil, sortAscending: Bool = true) -> [MOHeroLocation] {
+        // Ordena por fecha, ascendente o descendente
+        let sortDescriptor = SortDescriptor<MOHeroLocation>(\.date, order: sortAscending ? .forward : .reverse)
+        
+        // Equivalente a NSFetchRequest
+        let request = FetchDescriptor(predicate: filter, sortBy: [sortDescriptor])
+        
+        // Intentamos obtener las ubicaciones de la base de datos
+        return (try? context.fetch(request)) ?? []
+    }
+    
+    func fetchTransformations(filter: Predicate<MOHeroTransformation>? = nil, sortAscending: Bool = true) -> [MOHeroTransformation] {
+        // Ordena por nombre o cualquier otro atributo si lo deseas
+        let sortDescriptor = SortDescriptor<MOHeroTransformation>(\.name, order: sortAscending ? .forward : .reverse)
+        
+        // Equivalente a NSFetchRequest
+        let request = FetchDescriptor(predicate: filter, sortBy: [sortDescriptor])
+        
+        // Intentamos obtener las transformaciones de la base de datos
+        return (try? context.fetch(request)) ?? []
+    }
+    
     func numHeroes() -> Int {
         return (try? context.fetchCount(FetchDescriptor<MOHero>())) ?? 0
     }
