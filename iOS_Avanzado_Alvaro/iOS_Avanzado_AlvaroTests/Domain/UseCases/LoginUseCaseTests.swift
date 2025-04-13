@@ -61,7 +61,7 @@ final class LoginUseCaseTests: XCTestCase {
         // Then
         wait(for: [expectation], timeout: 1.0)
         XCTAssertNotNil(receivedError)
-        XCTAssertEqual(receivedError?.reason, "User not valid")
+        XCTAssertEqual(receivedError?.reason, "El usuario no es válido")
     }
     
     func testLoginWithInvalidPassword() {
@@ -85,7 +85,7 @@ final class LoginUseCaseTests: XCTestCase {
         // Then
         wait(for: [expectation], timeout: 1.0)
         XCTAssertNotNil(receivedError)
-        XCTAssertEqual(receivedError?.reason, "Invalid password")
+        XCTAssertEqual(receivedError?.reason, "La contraseña no es válida")
     }
     
     func testLoginSuccess() {
@@ -158,7 +158,7 @@ final class LoginUseCaseTests: XCTestCase {
         // Then
         wait(for: [expectation], timeout: 1.0)
         XCTAssertNotNil(receivedError)
-        XCTAssertEqual(receivedError?.reason, "Network error")
+        XCTAssertEqual(receivedError?.reason, "Ha ocurrido un error en la red")
 //        XCTAssertNil(.token)
     }
     

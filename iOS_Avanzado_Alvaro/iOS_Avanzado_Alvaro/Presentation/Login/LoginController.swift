@@ -36,19 +36,22 @@ class LoginViewController: UIViewController {
     private func bind() {
         viewModel.onStateChanged.bind { [weak self] state in
             switch state {
-            case .error(let reason): self?.renderError(reason)
-            case .loading: self?.renderLoading()
-            case .success: self?.renderSuccess()
+            case .error(let reason):
+                self?.renderError(reason)
+            case .loading:
+                self?.renderLoading()
+            case .success:
+                self?.renderSuccess()
+                let heroesVC = HeroesBuilder.build()
+                self?.navigationController?.pushViewController(heroesVC, animated: true)
             }
         }
     }
     
     
     @IBAction func logInButtonTapped(_ sender: Any) {
-        // CAMBIAR LOS CAMPOS userNameField.text y passwordField.text
-        viewModel.login(userName: "entrenah92@gmail.com", password: "asdfgh")
-        let heroesVC = HeroesBuilder.build()
-        navigationController?.pushViewController(heroesVC, animated: true)
+        viewModel.login(userName: userNameField.text, password: passwordField.text)
+      
     }
     
     

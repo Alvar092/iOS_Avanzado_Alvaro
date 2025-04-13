@@ -31,6 +31,9 @@
 		674FB9512DA536EC005ED563 /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674FB9502DA536EC005ED563 /* HeroesViewModel.swift */; };
 		674FB9552DA53805005ED563 /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674FB9532DA53805005ED563 /* HeroCell.swift */; };
 		674FB9562DA53805005ED563 /* HeroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 674FB9542DA53805005ED563 /* HeroCell.xib */; };
+		676B60E62DAC2C7900F43DB6 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676B60E52DAC2C6300F43DB6 /* LoginViewModelTests.swift */; };
+		676B615D2DAC2FD700F43DB6 /* HeroesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676B615C2DAC2FCB00F43DB6 /* HeroesViewModelTests.swift */; };
+		676B615F2DAC49E400F43DB6 /* HeroesDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676B615E2DAC49DD00F43DB6 /* HeroesDetailViewModelTests.swift */; };
 		6777963A2DA3D96100103334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677796342DA3D96100103334 /* Assets.xcassets */; };
 		6777963C2DA3D96100103334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 677796372DA3D96100103334 /* LaunchScreen.storyboard */; };
 		6777963D2DA3D96100103334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677796332DA3D96100103334 /* AppDelegate.swift */; };
@@ -111,6 +114,9 @@
 		674FB9502DA536EC005ED563 /* HeroesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewModel.swift; sourceTree = "<group>"; };
 		674FB9532DA53805005ED563 /* HeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
 		674FB9542DA53805005ED563 /* HeroCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCell.xib; sourceTree = "<group>"; };
+		676B60E52DAC2C6300F43DB6 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		676B615C2DAC2FCB00F43DB6 /* HeroesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewModelTests.swift; sourceTree = "<group>"; };
+		676B615E2DAC49DD00F43DB6 /* HeroesDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesDetailViewModelTests.swift; sourceTree = "<group>"; };
 		677795FF2DA3D8E400103334 /* iOS_Avanzado_Alvaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Avanzado_Alvaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		677796152DA3D8E400103334 /* iOS_Avanzado_AlvaroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_Avanzado_AlvaroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6777961F2DA3D8E400103334 /* iOS_Avanzado_AlvaroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_Avanzado_AlvaroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -468,6 +474,9 @@
 		67F196EB2DA875350095722A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				676B615E2DAC49DD00F43DB6 /* HeroesDetailViewModelTests.swift */,
+				676B615C2DAC2FCB00F43DB6 /* HeroesViewModelTests.swift */,
+				676B60E52DAC2C6300F43DB6 /* LoginViewModelTests.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -675,11 +684,14 @@
 				67DA1ABA2DA9A0DA0054BEE1 /* HeroesUseCaseTests.swift in Sources */,
 				67DA1A9B2DA90C320054BEE1 /* StoreDataProviderTests.swift in Sources */,
 				67DA1ABE2DA9B31D0054BEE1 /* HeroDetailUseCaseTests.swift in Sources */,
+				676B615D2DAC2FD700F43DB6 /* HeroesViewModelTests.swift in Sources */,
+				676B60E62DAC2C7900F43DB6 /* LoginViewModelTests.swift in Sources */,
 				67DA1A992DA905730054BEE1 /* MockSecureDataProvider.swift in Sources */,
 				67DA1A9D2DA92E1D0054BEE1 /* MockURLProtocol.swift in Sources */,
 				67DA1AC02DA9C21E0054BEE1 /* HeroTransformationUseCaseTests.swift in Sources */,
 				67DA1AA02DA92E4C0054BEE1 /* ApiProviderTests.swift in Sources */,
 				67DA1ABC2DA9A41B0054BEE1 /* LoginUseCaseTests.swift in Sources */,
+				676B615F2DAC49E400F43DB6 /* HeroesDetailViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
